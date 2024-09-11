@@ -1,0 +1,66 @@
+\section{Patterns}
+\begin{frame}{Definição de \textit{patterns}}
+  \textbf{Patterns = Regex + Magic}
+  \begin{widedescription}
+      \item \begin{quotation} \small\it
+        Some characters in the pattern, such as letters, are taken literally [...]
+        Other characters have a special meaning without a backslash. If a character
+        is taken literally or not depends on the 'magic' option and the items in the
+        pattern mentioned next\cite{vimReferenceManual}.
+      \end{quotation}
+  \end{widedescription}
+\end{frame}
+
+\begin{frame}{Definição de \textit{patterns}}
+  \textbf{REGEX}
+  \begin{widedescription}
+    \item Uma \textbf{expressão regular} pode ser definida como uma linguagem ou sequência de caracteres que é aceita
+    por um autômato finito;
+    \item \textbf{Expressões Regulares} são usualmente adotadas como uma solução para identificar ocorrências de
+    padrões em processamento de texto.
+  \end{widedescription}
+\end{frame}
+
+\begin{frame}{Uma breve história}
+  \begin{widedescription}
+    \item O conceito foi formalizado em 1951 pelo matemárico americano Stephen Cole Kleene \cite[kleene1956];
+    \item Expressões regulares foram popularizadas da década de 1980 em diante, tornando-se o foco principal de muitas
+          ferramentas essenciais de sistemas UNIX, como \texttt{grep}, \texttt{sed}, e \texttt{AWK}.
+  \end{widedescription}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Alguns exemplos de expressões regulares}
+    \begin{wideitemize}
+      \item \verb|/[A-Z]\w*/|
+      \item \verb$/\.[a-z]\+\(config\|rc\)\?\.\(json\|ya\?ml\)/$
+    \end{wideitemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Operadores}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{widedescription}
+        \item \verb|^| Início de linha
+        \item \verb|$| Final de linha
+        \item \verb|*| Zero ou mais vezes
+        \item \verb|+| Uma ou mais vezes
+      \end{widedescription}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{widedescription}
+        \item \verb$|$: Operador "OU"
+        \item \verb$?$: Opcional
+        \item \verb$[]$: Agrupamento de classes
+        \item \verb$()$: Agrupamento de expressões
+      \end{widedescription}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Classes de caracteres}
+  \begin{widedescription}
+    \item \verb$\w$: Word character
+    \item \verb$\d$: Digit
+    \item \verb$\s$: Whitespace
+  \end{widedescription}
+\end{frame}
